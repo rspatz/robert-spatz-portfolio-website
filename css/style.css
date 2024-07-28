@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Base Colors */
+:root {
+  --red: #ec502f;
+  --ligntred: #e0c4c4;
+  --black: #000;
+  --white: #fff;
+}
+
+/* Fonts */
+@font-face {
+  font-family: 'Manrope-Light';
+  src: url(../fonts/ttf/Manrope-Light.ttf);
+}
+
+.header {
+  height: 35rem;
+}
