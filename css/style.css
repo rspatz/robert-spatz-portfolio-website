@@ -3,20 +3,92 @@
   padding: 0;
 }
 
-/* Base Colors */
 :root {
+  /* Base Colors */
   --red: #ec502f;
   --ligntred: #e0c4c4;
   --black: #000;
   --white: #fff;
+
+  /* Base Fonts */
+  --main: 'Lato-Regular', sans-serif;
+  --heading: 'JosefinSans-Light', sans-serif;
+  --alt: 'Lato-Bold', sans-serif;
+
+  /* Base Font Calculations */
+  --base-size: 1.25rem;
+  --scale: 1.2;
+  --h1: calc(var(--h2) * var(--scale));
+  --h2: calc(var(--h3) * var(--scale));
+  --h3: calc(var(--h4) * var(--scale));
+  --h4: calc(var(--h5) * var(--scale));
+  --h5: calc(var(--h6) * var(--scale));
+  --h6: var(--base-size);
 }
 
 /* Fonts */
 @font-face {
-  font-family: 'Manrope-Light';
-  src: url(../fonts/ttf/Manrope-Light.ttf);
+  font-family: 'Lato-Regular';
+  src: url(../fonts/Lato/Lato-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Lato-Bold';
+  src: url(../fonts/Lato/Lato-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'JosefinSans-Light';
+  src: url(../fonts/Josefin_Sans/static/JosefinSans-Light.ttf);
+}
+
+/* Base Styles */
+h1 {
+  font-family: var(--heading);
+  text-transform: uppercase;
+  font-size: var(--h1);
+}
+
+h2 {
+  font-size: var(--h2);
+}
+
+h3 {
+  font-size: var(--h3);
+}
+
+h4 {
+  font-size: var(--h4);
+}
+
+h5 {
+  font-size: var(--h5);
+}
+
+h6 {
+  font-size: var(--h6);
+}
+
+p {
+  font-family: var(--main);
+}
+
+span {
+  font-family: var(--alt);
+  color: var(--red);
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  line-height: 1.5;
 }
 
 .header {
-  height: 35rem;
+  height: 40rem;
+  background: url('../img/blair-fraser-aI1tDC8PaLM-unsplash.jpg') no-repeat 0 0;
+  background-position: top;
+  background-size: cover;
 }
