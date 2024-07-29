@@ -47,6 +47,7 @@ h1 {
   font-family: var(--heading);
   text-transform: uppercase;
   font-size: var(--h1);
+  color: var(--white);
 }
 
 h2 {
@@ -88,7 +89,46 @@ body {
 
 .header {
   height: 40rem;
-  background: url('../img/blair-fraser-aI1tDC8PaLM-unsplash.jpg') no-repeat 0 0;
+  background: linear-gradient(rgba(16, 16, 16, 0.6), rgba(16, 16, 16, 0.6)),
+    url('../img/blair-fraser-aI1tDC8PaLM-unsplash.jpg') no-repeat 0 0;
   background-position: top;
   background-size: cover;
+}
+
+.header p {
+  width: 48%;
+  margin: 3rem auto;
+  text-align: center;
+  font-size: var(--h3);
+  color: var(--white);
+}
+
+.navigation-wrapper {
+  display: flex;
+  justify-content: space-around;
+  height: 6rem;
+  align-items: center;
+}
+
+.top-navigation ul {
+  display: flex;
+}
+
+.top-navigation li {
+  list-style: none;
+}
+
+.top-navigation a {
+  margin: 0 4rem;
+  font-family: var(--main);
+  font-size: 1.15rem;
+  color: var(--white);
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: 0.2s ease-in-out;
+}
+
+.top-navigation a:hover {
+  border-bottom: solid 3px var(--red);
+  padding-bottom: 1rem;
 }
