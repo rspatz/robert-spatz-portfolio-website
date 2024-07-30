@@ -1,136 +1,184 @@
-* {
-  margin: 0;
-  padding: 0;
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  :root {
+    /* Base Colors */
+    --red: #ec502f;
+    --ligntred: #e0c4c4;
+    --black: #000;
+    --white: #fff;
+
+    /* Base Fonts */
+    --main: 'Lato-Regular', sans-serif;
+    --heading: 'JosefinSans-Light', sans-serif;
+    --alt: 'Lato-Bold', sans-serif;
+
+    /* Base Font Calculations */
+    --base-size: 1.25rem;
+    --scale: 1.2;
+    --h1: calc(var(--h2) * var(--scale));
+    --h2: calc(var(--h3) * var(--scale));
+    --h3: calc(var(--h4) * var(--scale));
+    --h4: calc(var(--h5) * var(--scale));
+    --h5: calc(var(--h6) * var(--scale));
+    --h6: var(--base-size);
+  }
+
+  /* Fonts */
+  @font-face {
+    font-family: 'Lato-Regular';
+    src: url(../fonts/Lato/Lato-Regular.ttf);
+  }
+
+  @font-face {
+    font-family: 'Lato-Bold';
+    src: url(../fonts/Lato/Lato-Bold.ttf);
+  }
+
+  @font-face {
+    font-family: 'JosefinSans-Light';
+    src: url(../fonts/Josefin_Sans/static/JosefinSans-Light.ttf);
+  }
+
+  /* Base Styles */
+  h1 {
+    font-family: var(--heading);
+    text-transform: uppercase;
+    font-size: var(--h1);
+    color: var(--white);
+  }
+
+  h2 {
+    font-family: var(--heading);
+    font-size: var(--h2);
+  }
+
+  h3 {
+    font-family: var(--heading);
+    font-size: var(--h3);
+  }
+
+  h4 {
+    font-family: var(--heading);
+    font-size: var(--h4);
+  }
+
+  h5 {
+    font-family: var(--heading);
+    font-size: var(--h5);
+  }
+
+  h6 {
+    font-family: var(--heading);
+    font-size: var(--h6);
+  }
+
+  p {
+    font-family: var(--main);
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  body {
+    line-height: 1.5;
+  }
+
+  .header {
+    height: 40rem;
+    background: linear-gradient(rgba(16, 16, 16, 0.6), rgba(16, 16, 16, 0.6)),
+      url('../img/blair-fraser-aI1tDC8PaLM-unsplash.jpg') no-repeat 0 0;
+    background-position: top;
+    background-size: cover;
+  }
+
+  .navigation-wrapper {
+    display: flex;
+    justify-content: space-around;
+    height: 6rem;
+    align-items: center;
+  }
+
+  .top-navigation ul {
+    display: flex;
+  }
+
+  .top-navigation li {
+    list-style: none;
+  }
+
+  .top-navigation a {
+    margin: 0 4rem;
+    font-family: var(--main);
+    font-size: 1.15rem;
+    color: var(--white);
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+  }
+
+  .top-navigation a:hover {
+    border-bottom: solid 3px var(--red);
+    padding-bottom: 1rem;
+  }
+
+  .button {
+    display: inline-block;
+    background: var(--red);
+    padding: 0.6rem 0.9rem;
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--black);
+    font-family: var(--main);
+    font-size: var(--h6);
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.3s ease-in-out;
+    margin-top: 1rem;
+  }
+
+  .button:hover {
+    background-color: #5d1709;
+    color: var(--white);
+  }
 }
 
-:root {
-  /* Base Colors */
-  --red: #ec502f;
-  --ligntred: #e0c4c4;
-  --black: #000;
-  --white: #fff;
+@layer intro {
+  .intro p {
+    width: 55%;
+    margin: 4rem auto;
+    text-align: center;
+    letter-spacing: 0.05rem;
+    font-size: var(--h3);
+    color: var(--white);
+  }
 
-  /* Base Fonts */
-  --main: 'Lato-Regular', sans-serif;
-  --heading: 'JosefinSans-Light', sans-serif;
-  --alt: 'Lato-Bold', sans-serif;
-
-  /* Base Font Calculations */
-  --base-size: 1.25rem;
-  --scale: 1.2;
-  --h1: calc(var(--h2) * var(--scale));
-  --h2: calc(var(--h3) * var(--scale));
-  --h3: calc(var(--h4) * var(--scale));
-  --h4: calc(var(--h5) * var(--scale));
-  --h5: calc(var(--h6) * var(--scale));
-  --h6: var(--base-size);
+  span {
+    font-family: var(--alt);
+    color: var(--red);
+    font-size: var(--h2);
+  }
 }
 
-/* Fonts */
-@font-face {
-  font-family: 'Lato-Regular';
-  src: url(../fonts/Lato/Lato-Regular.ttf);
-}
+@layer contact {
+  .contact {
+    text-align: center;
+    padding: 6rem 0;
+    background: #1a1a1a;
+    color: var(--white);
+  }
 
-@font-face {
-  font-family: 'Lato-Bold';
-  src: url(../fonts/Lato/Lato-Bold.ttf);
-}
+  .contact h2 {
+    text-transform: uppercase;
+    font-weight: 700;
+  }
 
-@font-face {
-  font-family: 'JosefinSans-Light';
-  src: url(../fonts/Josefin_Sans/static/JosefinSans-Light.ttf);
-}
-
-/* Base Styles */
-h1 {
-  font-family: var(--heading);
-  text-transform: uppercase;
-  font-size: var(--h1);
-  color: var(--white);
-}
-
-h2 {
-  font-size: var(--h2);
-}
-
-h3 {
-  font-size: var(--h3);
-}
-
-h4 {
-  font-size: var(--h4);
-}
-
-h5 {
-  font-size: var(--h5);
-}
-
-h6 {
-  font-size: var(--h6);
-}
-
-p {
-  font-family: var(--main);
-}
-
-span {
-  font-family: var(--alt);
-  color: var(--red);
-  font-size: var(--h2);
-}
-
-img {
-  max-width: 100%;
-}
-
-body {
-  line-height: 1.5;
-}
-
-.header {
-  height: 40rem;
-  background: linear-gradient(rgba(16, 16, 16, 0.6), rgba(16, 16, 16, 0.6)),
-    url('../img/blair-fraser-aI1tDC8PaLM-unsplash.jpg') no-repeat 0 0;
-  background-position: top;
-  background-size: cover;
-}
-
-.header p {
-  width: 55%;
-  margin: 4rem auto;
-  text-align: center;
-  letter-spacing: 0.05rem;
-  font-size: var(--h3);
-  color: var(--white);
-}
-
-.navigation-wrapper {
-  display: flex;
-  justify-content: space-around;
-  height: 6rem;
-  align-items: center;
-}
-
-.top-navigation ul {
-  display: flex;
-}
-
-.top-navigation li {
-  list-style: none;
-}
-
-.top-navigation a {
-  margin: 0 4rem;
-  font-family: var(--main);
-  font-size: 1.15rem;
-  color: var(--white);
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: 0.3s ease-in-out;
-}
-
-.top-navigation a:hover {
-  border-bottom: solid 3px var(--red);
-  padding-bottom: 1rem;
+  .contact p {
+    font-size: var(--h5);
+    margin: 2rem 0;
+  }
 }
