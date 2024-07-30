@@ -96,34 +96,14 @@
     background-size: cover;
   }
 
-  .navigation-wrapper {
-    display: flex;
-    justify-content: space-around;
-    height: 6rem;
-    align-items: center;
-  }
-
-  .top-navigation ul {
-    display: flex;
-  }
-
-  .top-navigation li {
-    list-style: none;
-  }
-
-  .top-navigation a {
-    margin: 0 4rem;
-    font-family: var(--main);
-    font-size: 1.15rem;
-    color: var(--white);
-    text-transform: uppercase;
-    text-decoration: none;
+  .header svg {
+    width: 1.875rem;
+    fill: var(--white);
     transition: 0.3s ease-in-out;
   }
 
-  .top-navigation a:hover {
-    border-bottom: solid 3px var(--red);
-    padding-bottom: 1rem;
+  .name svg {
+    fill: var(--red);
   }
 
   .button {
@@ -144,6 +124,48 @@
   .button:hover {
     background-color: #5d1709;
     color: var(--white);
+  }
+}
+
+@layer nav {
+  .navigation-wrapper {
+    display: flex;
+    flex-flow: row-wrap;
+    justify-content: space-around;
+    height: 8rem;
+    padding-top: 2rem;
+    align-items: center;
+  }
+
+  .top-navigation ul {
+    display: flex;
+  }
+
+  .top-navigation li {
+    list-style: none;
+  }
+
+  .top-navigation a {
+    margin: 0 2rem;
+    font-family: var(--main);
+    font-size: 1.15rem;
+    color: var(--white);
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+  }
+
+  .top-navigation a:hover {
+    color: var(--ligntred);
+  }
+
+  .top-navigation .button:hover {
+    background-color: #5d1709;
+    color: var(--white);
+  }
+
+  .top-navigation svg:hover {
+    fill: var(--ligntred);
   }
 }
 
