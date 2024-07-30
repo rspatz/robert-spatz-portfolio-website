@@ -7,7 +7,7 @@
   :root {
     /* Base Colors */
     --red: #ec502f;
-    --ligntred: #e0c4c4;
+    --lightred: #ff6666;
     --black: #000;
     --white: #fff;
 
@@ -156,7 +156,7 @@
   }
 
   .top-navigation a:hover {
-    color: var(--ligntred);
+    color: var(--lightred);
   }
 
   .top-navigation .button:hover {
@@ -165,7 +165,7 @@
   }
 
   .top-navigation svg:hover {
-    fill: var(--ligntred);
+    fill: var(--lightred);
   }
 }
 
