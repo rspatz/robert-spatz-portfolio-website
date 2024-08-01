@@ -205,16 +205,16 @@
   }
 }
 
+.sr-only {
+  display: none;
+}
+
 /* Mobile Navigation */
 @media only screen and (max-width: 600px) {
   /* Top Navigation */
   /* .logo {
     margin-left: 0;
   } */
-
-  .sr-only {
-    display: none;
-  }
 
   .top-navigation {
     background-color: var(--black);
