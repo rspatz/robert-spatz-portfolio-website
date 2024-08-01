@@ -204,3 +204,106 @@
     margin: 2rem 0;
   }
 }
+
+/* Mobile Navigation */
+@media only screen and (max-width: 600px) {
+  /* Top Navigation */
+  /* .logo {
+    margin-left: 0;
+  } */
+
+  .sr-only {
+    display: none;
+  }
+
+  .top-navigation {
+    background-color: var(--black);
+  }
+
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+    padding: 2rem 0;
+    opacity: 95%;
+    z-index: 1000;
+  }
+
+  .nav-container ul {
+    flex-direction: column;
+    margin: 0;
+    marign-right: 2rem;
+  }
+
+  .nav-container li {
+    list-style-type: none;
+  }
+
+  .nav-container a {
+    color: var(--white);
+    text-decoration: none;
+    text-decoration: none;
+  }
+
+  .main-nav {
+    flex-direction: column;
+    margin: 6rem 0 0 0;
+    padding: 0;
+    position: fixed;
+    inset: 0 0 0 20%;
+    height: 28rem;
+    width: 80%;
+    background-color: var(--bg-black);
+    z-index: 9999;
+    transform: translateX(100%);
+    transition: transform 350ms ease-out;
+  }
+
+  .main-nav[data-visible='true'] {
+    transform: translateX(0);
+  }
+
+  .mobile-nav-toggle {
+    position: absolute;
+    top: 3.5rem;
+    right: 3rem;
+    background: url('../assets/mobile/icon-hamburger.svg');
+    background-color: transparent;
+    border: none;
+    width: 1rem;
+    background-repeat: no-repeat;
+    aspect-ratio: 1;
+    z-index: 9999;
+  }
+
+  .mobile-nav-toggle[aria-expanded='true'] {
+    background-image: url('../assets/mobile/icon-cross.svg');
+  }
+
+  .main-nav li {
+    margin: 2rem 0 0 0;
+    text-align: center;
+    text-decoration: none;
+    list-style: none;
+  }
+
+  .main-nav a {
+    font-family: 'Commissioner-Regular';
+    text-transform: capitalize;
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+  }
+
+  .schedule-button {
+    padding: 1.25rem 3rem;
+    background-color: var(--red);
+    color: var(--white);
+    border: none;
+    width: 70%;
+    margin: 2rem 4rem;
+  }
+}
+
+/* END Mobile Navigation */
